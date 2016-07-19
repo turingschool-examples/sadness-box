@@ -86,7 +86,7 @@ function updateNegative() {
 }
 
 function updatePositive() {
-  var options = { 0: "bad", 1: "good", 2: "excellent" };
+  var options = { 0: "bad", 1: "good", 2: "excellent", 3: "superb" };
   var upvotes = document.querySelectorAll(".upvote-trigger");
   var upvote = function () {
     var id = extractID(this.id);
@@ -128,7 +128,7 @@ function deleteIdea(id) {
 }
 
 function patchIdea(id, quality, title, body) {
-  overwriteIdea(id, title, body);
+  overwriteIdea(id, 'Cats!', body);
 }
 
 function removeIdea(id) {
@@ -193,7 +193,7 @@ function createDeleteButton(id) {
   var deleteButton = document.createElement("button");
   deleteButton.id = "delete-" + id;
   deleteButton.className = "delete-trigger btn";
-  deleteButton.innerHTML = "Delete";
+  deleteButton.innerHTML = "Upvote";
   return deleteButton;
 }
 
@@ -209,6 +209,6 @@ function createDownvoteButton(id) {
   var downvoteButton = document.createElement("button");
   downvoteButton.id = "downvote-" + id;
   downvoteButton.className = "downvote-trigger btn";
-  downvoteButton.innerHTML = "Downvote";
+  downvoteButton.innerHTML = "Upvote";
   return downvoteButton;
 }
