@@ -5,6 +5,7 @@ $(document).ready(function() {
     updateQuality();
     filterIdeas();
   $("#create-trigger").click(function() {
+    debugger;
     createIdea();
   });
 });
@@ -29,9 +30,10 @@ function filterIdeas() {
 }
 
 function createIdea() {
+  debugger;
   var title = $("#create-title").val();
   var body = $("#create-body").val();
-  appendIdea('');
+  appendIdea({});
   $("#create-title").val("");
   $("#create-body").val("");
   updateIdea();
